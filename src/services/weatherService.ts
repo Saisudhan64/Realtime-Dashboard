@@ -1,12 +1,7 @@
 const BASE_URL = 'https://api.open-meteo.com/v1/forecast'
 
-// Simple city coordinate lookup (Open-Meteo needs lat/lon, not city names)
-const CITY_COORDS: Record<string, { lat: number; lon: number }> = {
-  Chennai: { lat: 13.0827, lon: 80.2707 },
-  Mumbai: { lat: 19.076, lon: 72.8777 },
-  Delhi: { lat: 28.7041, lon: 77.1025 },
-  Bangalore: { lat: 12.9716, lon: 77.5946 },
-}
+import { CITY_COORDS } from '../utils/cityCoordinates'
+
 
 // WMO weather codes → human-readable description
 function getWeatherDescription(code: number): string {
